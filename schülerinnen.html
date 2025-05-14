@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AG BURSE</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body style="margin-top: 20px; margin-bottom: 20px;">
+    <nav class="navbar is-fixed-top" style="padding: 15px;" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!--<img id="profile" src="img/logo.png" style="width: 50px; border-radius: 100px;">-->
+            <a class="navbar-item" href="home.html">
+                <strong>AG BURSE</strong>
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="aktuelles.html">Aktuelles
+                </a>
+                <a class="navbar-item" href="team.html">Team
+                </a>
+                <a class="navbar-item " href="forschung.html">Forschung
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-item">
+                        Labore
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="analytik.html">Instrumentelle Analytik
+                        </a>
+                        <a class="navbar-item" href="zellkultur.html">
+                            Zellkulturtechnik
+                        </a>
+                    </div>
+                </div>
+                <a class="navbar-item" href="schülerinnen.html">Schüler:innen
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero is-light is-medium"
+        style="background-image: url(img/schülerinnen.JPG); background-size: cover; background-position: center; margin-top: 82px; height: 288px;">
+        <div class="hero-body">
+        </div>
+    </section>
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <div class="content">
+                <h1 class="title is-3">
+                    Wissenschaft zum Anfassen
+                </h1>
+                <h3 class="title is-4">
+                    MINT-Events im Analytischen Labor
+                </h3>
+                <p>
+                    Wie entsteht Farbe? Warum leuchtet etwas im Dunkeln? Was verrät uns Licht über die Welt, die uns
+                    umgibt? Und was haben diese Phänomene mit unserer Forschung zu tun? Unsere MINT-Events - vom Schüler
+                    Express bis hin zu spannenden Workshops rund um Farblehre, Fluoreszenz und moderne analytische
+                    Methoden - richten sich an alle, die Naturwissenschaften nicht nur aus dem Lehrbuch kennen wollen.
+                    Hier bekommt Ihr einen Einblick in den Laboralltag, experimentiert selbst und entdeckt, wie Licht,
+                    Farbe und Chemie zusammenhängen.<br><br>Für Infos zu den nächsten Terminen, Anmeldungen und Angeboten
+                    melden Sie sich gern bei <a style="color:#009999;" href="mailto: antje.burse@eah-jena.de"
+                    target="_blank"><i class="fa-regular fa-envelope"></i></i> uns.</a>
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+
+<footer class="footer" style="background-color: white; padding-bottom: 28px;">
+    <div class="content has-text-centered">
+        <p class="buttons is-centered">
+            <a class="button is-small is-dark is-outlined" href="https://www.eah-jena.de" target="_blank">EAH Jena</a>
+            <a class="button is-small is-dark is-outlined" href="https://www.mt.eah-jena.de/content/index.php"
+                target="_blank">Fachbereich MT/BT</a>
+            <a class="button is-small is-dark is-outlined" href="impressum.html">Impressum</a>
+            <a class="button is-small is-dark is-outlined" href="datenschutz.html">Datenschutz</a>
+        </p>
+    </div>
+</footer>
+
+<script>
+    // Menüsteuerung
+    document.addEventListener('DOMContentLoaded', () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+            el.addEventListener('click', () => {
+                // Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+            });
+        });
+    });
+
+    /*
+        profiles = ["logo.png", "antje.gif", "jana.jpeg", "jennifer.jpeg", "kristina.jpeg", "merlin.png", "roman.jpeg"];
+        profileSelector = 0;
+    
+        function changeProfile() {
+    
+            if (profileSelector == profiles.length - 1) {
+                profileSelector = 0;
+            } else {
+                profileSelector = profileSelector + 1;
+            }
+            profile = "img/" + profiles[profileSelector];
+    
+            document.getElementById("profile").setAttribute("src", profile);
+        }
+        window.setInterval(changeProfile, 1500);
+    */
+</script>
+
+</html>
